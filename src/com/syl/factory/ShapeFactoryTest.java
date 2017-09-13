@@ -12,15 +12,13 @@ public class ShapeFactoryTest {
         draw("circle");
     }
     public  void draw(String shapeName){
-        ShapeFactory shapeFactory ;
-        shapeFactory = new ShapeFactory();
         Shape shape ;
-        shape = shapeFactory.createShape(shapeName);
+        shape = ShapeFactory.createShape(shapeName);
         try {
             shape.draw();
-        } catch (Exception e) {
+        } catch (NullPointerException e) {
             //e.printStackTrace();
-            System.out.println("名称指定错误！！！！");
+            System.out.println(e.getMessage()+"名称指定错误！！！！");
         }
     }
 
