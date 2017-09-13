@@ -15,7 +15,7 @@ public class ShapeFactoryTest {
         ShapeFactory shapeFactory ;
         shapeFactory = new ShapeFactory();
         Shape shape ;
-        shape = shapeFactory.getShape(shapeName);
+        shape = shapeFactory.createShape(shapeName);
         try {
             shape.draw();
         } catch (Exception e) {

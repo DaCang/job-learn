@@ -2,7 +2,7 @@ package com.syl.factory;
 
 class ShapeFactory  {
 
-    Shape getShape (String shapeName){
+    Shape createShape (String shapeName){
 
         if("star".equals(shapeName)){
             return  new Star();
