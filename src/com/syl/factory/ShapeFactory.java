@@ -2,7 +2,7 @@ package com.syl.factory;
 
 class ShapeFactory  {
 
-    Shape createShape (String shapeName){
+    static Shape  createShape (String shapeName){
 
         if("star".equals(shapeName)){
             return  new Star();
@@ -11,7 +11,7 @@ class ShapeFactory  {
         }else if("square".equals(shapeName)){
             return  new Square();
         }else{
-            System.out.println("没有你想要的形状");
+            System.out.print("没有你想要的形状,原因是:");
             return  null;
         }
     }
