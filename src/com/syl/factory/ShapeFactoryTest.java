@@ -18,7 +18,7 @@ public class ShapeFactoryTest {
             shape.draw();
         } catch (NullPointerException e) {
             //e.printStackTrace();
-            System.out.println(e.getMessage()+"名称指定错误！！！！");
+            System.out.println("名称指定错误！！！！");
         }
     }
 
