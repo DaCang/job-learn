@@ -1,15 +1,13 @@
-package com.syl.factory;
+package com.syl.reflect;
 
 import com.syl.duotai.Shape;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ShapeFactoryTest {
     @Test
     public void getAShape ()  {
         draw("star");
-        draw("c");
+        draw("ddd");
         draw("circle");
     }
     public  void draw(String shapeName){
@@ -19,8 +17,9 @@ public class ShapeFactoryTest {
             shape.draw();
         } catch (NullPointerException e) {
             //e.printStackTrace();
-            System.out.println("名称指定错误！！！！");
+            System.out.println("原因:名称指定错误！！！！");
         }
     }
+
 
 }

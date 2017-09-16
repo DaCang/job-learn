@@ -1,8 +1,13 @@
 package com.syl.factory;
 
-class ShapeFactory  {
+import com.syl.duotai.Circle;
+import com.syl.duotai.Shape;
+import com.syl.duotai.Square;
+import com.syl.duotai.Star;
 
-    static Shape  createShape (String shapeName){
+public class ShapeFactory  {
+
+    public  static Shape createShape (String shapeName){
 
         if("star".equals(shapeName)){
             return  new Star();
