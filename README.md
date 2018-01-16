@@ -1,8 +1,4 @@
 # job-learn
-test pr
-
-
-## DONE??
-
-
-### done.
+## activemq 包括
+ * MessageSender
+ * MessageReceiver
