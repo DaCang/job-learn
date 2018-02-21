@@ -13,14 +13,7 @@ public class Bank {
         System.out.println(accounts[to]);
 
     }
-    /*public double getBalance(){
-        double
-        for (int count:
-        accounts ) {
 
-        }
-        return
-    }*/
     public  int size(){
         return accounts.length;
     }
