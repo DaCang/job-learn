@@ -16,7 +16,7 @@ public class Bank {
 
     public  int size(){
 
-
+        System.out.println("ddddd");
 
         return accounts.length;
     }
