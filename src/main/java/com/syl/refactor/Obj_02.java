@@ -1,4 +1,4 @@
-package com.syl.generics;
+package com.syl.refactor;
 
 public interface Obj_02 {
     void say (String name);

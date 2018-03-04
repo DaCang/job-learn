@@ -1,4 +1,4 @@
-package com.syl.generics;
+package com.syl.refactor;
 
 /**
  * @author syl

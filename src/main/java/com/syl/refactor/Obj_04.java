@@ -1,4 +1,4 @@
-package com.syl.generics;
+package com.syl.refactor;
 
 public abstract class Obj_04 {
     public abstract void say (String name);
