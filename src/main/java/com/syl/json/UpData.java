@@ -8,15 +8,14 @@
 
 package com.syl.json;
 
+import org.junit.Test;
+
 public class UpData {
     public static void main (String[] args) {
 
-        //http://ch.jims-cloud.com/a/fiance/inpSettleMaster/save?visitNo=201800223
-        // &payType=5,1,4
+
         // &payMoney=2000,1556.11,2607.74
-        // &changes=0.00
-        // &paymentsMoney=2000.00
-        // &totalCharges=6163.85
+
          String payMoney ="2000,1556.11,2607.74";
          String[] pay=payMoney.split(",");
          Double cost =0.00;
@@ -30,5 +29,22 @@ public class UpData {
         }
         System.out.println(cost);
         System.out.println(costExact);
+    }
+
+    /**
+     * 条件表达式  Conditional expression
+     * 三目表达式
+     */
+    @Test
+    public void testConditionalExpression(){
+
+        int a =14;
+        //System.out.println(a>20?"大于20":(a>10?"小于20并且大于10":(a>5?"大于5":"小于5")));
+
+
+        String  chargeType="16";
+        String billingAttr ="不计价";
+        String ownExpense ="1";
+        System.out.println(chargeType=="1"?"1":billingAttr=="不计价"?"2":ownExpense=="1"?"自费":"医保");
     }
 }
