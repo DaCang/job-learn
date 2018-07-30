@@ -47,4 +47,22 @@ public class UpData {
         String ownExpense ="1";
         System.out.println(chargeType=="1"?"1":billingAttr=="不计价"?"2":ownExpense=="1"?"自费":"医保");
     }
+
+    /**
+     * 测试 ||
+     */
+    @Test
+    public void testIfCondition(){
+
+        String remarks =null;
+        String remarks1 ="";
+        testIfCondition(remarks);
+        testIfCondition(remarks1);
+
+    }
+    public void testIfCondition(String remarks){
+        if(remarks ==null || "".equals(remarks)){
+            System.out.println("HERE");
+        }
+    }
 }
