@@ -10,6 +10,9 @@ package com.syl.json;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class UpData {
     public static void main (String[] args) {
 
@@ -63,6 +66,44 @@ public class UpData {
     public void testIfCondition(String remarks){
         if(remarks ==null || "".equals(remarks)){
             System.out.println("HERE");
+        }
+    }
+    @Test
+    public void testDouble(){
+        System.out.println(roundDouble(3.575,100, 2));
+    }
+    /**
+     * 四舍五入保留两位小数
+     * @param b1 要保留的参数
+     * @param b2 保留位数对应的10的幂数
+     * @param scale 保留位数
+     * @return
+     */
+    public  double roundDouble(double b1,double b2,int scale) {
+        BigDecimal b = new BigDecimal(b1);
+        BigDecimal bc = new BigDecimal(b2);
+        double result = b.multiply(bc).setScale(scale, BigDecimal.ROUND_HALF_UP).doubleValue();
+        BigDecimal bigDecimal = new BigDecimal(result);
+        return bigDecimal.divide(bc, scale, RoundingMode.HALF_UP).doubleValue();
+    }
+    @Test
+    public void testLoop(){
+        int i =10;
+        loop:while (i>0){
+            if(i%3==0){
+                System.out.println(i+" 被 3 整除");
+            }
+            else if(i%3==1){
+                System.out.println(i+" 除 3 余 1");
+               // continue loop;  这里无限循环了
+            }
+            else if(i%3==2){
+                System.out.println(i+" 除 3 余 2");
+                break  loop;
+            }
+
+            i--;
+
         }
     }
 }
